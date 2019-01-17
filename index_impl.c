@@ -10,7 +10,7 @@
 #include <string.h>
 #include <time.h>
 
-//-----------------------------Entry------------------------------------------//
+// Entry
 
 enum ErrorCode CreateEntry(const Word *word, Entry *entry) {
     entry->word = (Word *)word; // pointer to the real word
@@ -85,7 +85,7 @@ void CopyEntry(Entry *dest, const Entry *source) {
     CopyPayload(dest, source);
 }
 
-//-----------------------------EntryList--------------------------------------//
+// EntryList
 
 enum ErrorCode CreateEntryList(EntryList *entryList) {
     entryList->size = 0;

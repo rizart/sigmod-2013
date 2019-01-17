@@ -106,7 +106,7 @@ void DeduplicateQueries(QuerySet *qset, EntryList *entries) {
         }
 }
 
-//------------------- BIT MAP OPERATIONS -------------------------------------//
+// BITMAP OPERATIONS
 
 void CreateQueriesBitMap(QueriesBitMap *queries_bitmap, QuerySet general) {
     int total_queries = general.size;

@@ -20,8 +20,6 @@ typedef struct Cache_Queue Cache_Queue;
 // this structure holds the cache
 typedef struct Cache Cache;
 
-//----------------------------------------------------------------------------//
-
 // initialize cache given the cache size
 void Initialize_Cache(Cache *cache, int queue_size);
 
@@ -40,8 +38,6 @@ int Search_Cache(Cache *cache, Word word, EntryList *edit_results,
 // if found_in_cache is true there will be no update at all
 void Update_Cache(Cache *cache, Word word, EntryList *edit_results,
                   unsigned int lru_bucket, int found_in_cache);
-
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

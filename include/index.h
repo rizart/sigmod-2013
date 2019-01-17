@@ -10,7 +10,7 @@ extern "C" {
 
 typedef struct Queries Queries;
 
-// ========================== Structures ==================================== //
+// Structures
 
 /*
  * This structure holds a generic information about a particular entry.
@@ -48,7 +48,7 @@ struct Entry { // Struct entry points to a word and has a payload
  * This structure holds a list of entries.
  */
 typedef struct EntryList EntryList;
-//----------------------------------------------------------------------------//
+
 /*
  * This structure holds a vp tree node.
  */
@@ -58,7 +58,7 @@ typedef struct VPTnode VPTnode;
  */
 typedef struct VP_Tree VP_Tree;
 
-//-------------------------Entry----------------------------------------------//
+// Entry
 
 /*
  * Initialize the given entry with the given word.
@@ -90,8 +90,7 @@ void UpdatePayload(Entry *entry, int query_id, int position);
  */
 void CopyEntry(Entry *dest, const Entry *source);
 
-//----------------------------------------------------------------------------//
-//---------------------------EntryList----------------------------------------//
+// EntryList
 
 /*
  * Initialize the given EntryList.
@@ -137,9 +136,6 @@ void PrintEntryList(const EntryList *entryList);
  * Prints the entries payload of the given entryList.
  */
 void PrintEntrylistPayloads(EntryList *entries);
-
-//----------------------------------------------------------------------------//
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

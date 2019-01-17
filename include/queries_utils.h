@@ -9,7 +9,6 @@
 extern "C" {
 #endif
 
-//----------------------------------------------------------------------------//
 /*
  * This structure holds a set of queries
  */
@@ -20,15 +19,11 @@ typedef struct QuerySet QuerySet;
  */
 typedef struct QueriesBitMap QueriesBitMap;
 
-//----------------------------------------------------------------------------//
-
 // create all queries sets
 void CreateQueriesSets(Queries *queries);
 
 // destroy all queries sets
 void DestroyQueriesSets(Queries *queries);
-
-//----------------------------------------------------------------------------//
 
 // create a particular query set
 void CreateQuerySet(QuerySet *qtable);
@@ -39,16 +34,11 @@ void AddQuery(QuerySet *qtable, Query *query);
 // destroy a particular query set
 void DestroyQuerySet(QuerySet *qtable);
 
-//----------------------------------------------------------------------------//
-
 // given an query set deduplicate all queries - create entries based on
 // the queries words - put them all into the entries entrylist
 void DeduplicateQueries(QuerySet *qset, EntryList *entries);
 
-//----------------------------------------------------------------------------//
-
-//------------------- BIT MAP OPERATIONS -------------------------------------//
-//----------------------------------------------------------------------------//
+// BIT MAP OPERATIONS
 
 // create a bit map given the query set that holds all the queries
 void CreateQueriesBitMap(QueriesBitMap *queries_bitmap, QuerySet general);
@@ -70,9 +60,6 @@ unsigned int SearchQueriesBitMap(Results_struct *results,
                                  EntryList *hamming_results,
                                  EntryList *edit_results,
                                  EntryList exact_results, QuerySet general);
-
-//----------------------------------------------------------------------------//
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

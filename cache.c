@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//------------------------ CACHE QUEUE OPERATIONS ----------------------------//
+// CACHE QUEUE OPERATIONS
 
 void Initialize_CacheQueue(Cache *cache) {
     cache->queue->head = NULL;        // theres not head
@@ -97,7 +97,7 @@ void AddEntry_CacheQueue(Cache *cache, Cache_Entry *centry) {
     (cache->queue->num_of_entries)++; // increase num of entries
 }
 
-//---------------------- CACHE HASHTABLE OPERATIONS --------------------------//
+// CACHE HASHTABLE OPERATIONS
 
 void AddEntry_CacheHashTable(Cache *cache, unsigned int bucket,
                              Cache_Entry *centry) {
@@ -118,7 +118,7 @@ void AddEntry_CacheHashTable(Cache *cache, unsigned int bucket,
     }
 }
 
-//-------------------------- CACHE OPERATIONS --------------------------------//
+// CACHE OPERATIONS
 
 void Initialize_Cache(Cache *cache, int queue_size) {
     int hash_size = FindNextPrime(queue_size);

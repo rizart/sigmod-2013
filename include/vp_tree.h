@@ -7,8 +7,7 @@
 extern "C" {
 #endif
 
-//----------------------------------------------------------------------------//
-//------------------------VP UTILITIES----------------------------------------//
+// VP UTILITIES
 
 /*
  *Finds the best vp from a set of vp candidates
@@ -23,8 +22,7 @@ void GenerateNewSets(EntryList *left_subtree, EntryList *right_subtree,
                      EntryList *entries, VPTnode *node, int vp, int median,
                      enum MatchType type);
 
-//----------------------------------------------------------------------------//
-//--------------------------VP TREE-------------------------------------------//
+// VP TREE
 
 /*
  * Initialize a vp tree
@@ -47,9 +45,6 @@ void SearchVpTree(const Word *word, int threshold, const VPTnode *node,
  * Destroys a vp tree recursively
  */
 void DestroyVpTree(VPTnode *node);
-
-//----------------------------------------------------------------------------//
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

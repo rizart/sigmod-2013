@@ -7,14 +7,12 @@
 extern "C" {
 #endif
 
-//--------------------------     EDIT  ---------------------------------------//
+// EDIT
 
 /*
  * This structure holds the index for the edit distance type entries.
  */
 typedef struct Edit_Index Edit_Index;
-
-//----------------------------------------------------------------------------//
 
 // initialize edit index
 void InitializeEditIndex(Edit_Index *index);
@@ -29,16 +27,12 @@ void BuildEditIndex(Edit_Index *index, EntryList *entries);
 void SearchEditIndex(Edit_Index index, Word word, EntryList *result,
                      EntryList *result_cache);
 
-//----------------------------------------------------------------------------//
-
-//----------------------------   HAMMING    ----------------------------------//
+// HAMMING
 
 /*
  * This structure holds the index for the hamming distance type entries.
  */
 typedef struct Hamming_Index Hamming_Index;
-
-//----------------------------------------------------------------------------//
 
 // initialize hamming index
 void InitializeHammingIndex(Hamming_Index *index);
@@ -53,16 +47,12 @@ void BuildHammingIndex(Hamming_Index *index, EntryList *entries);
 // search the hamming index and fill entrylist result with the results
 void SearchHammingIndex(Hamming_Index index, Word word, EntryList *result);
 
-//----------------------------------------------------------------------------//
-
-//----------------------------  EXACT    -------------------------------------//
+// EXACT
 
 /*
  * This structure holds the index for the exact distance type entries.
  */
 typedef struct Exact_Index Exact_Index;
-
-//----------------------------------------------------------------------------//
 
 // initialize exact index
 void InitializeExactIndex(Exact_Index *index);
@@ -76,16 +66,12 @@ void BuildExactIndex(Exact_Index *index, EntryList *entries);
 // search the exact index and fill entrylist result with the results
 void SearchExactIndex(Exact_Index index, Word word, EntryList *results);
 
-//----------------------------------------------------------------------------//
-
-//-------------------------    INDEXES     -----------------------------------//
+// INDEXES
 
 /*
  * This structure holds all indexes.
  */
 typedef struct Indexes Indexes;
-
-//----------------------------------------------------------------------------//
 
 // initialize all indexes
 void InitializeIndexes(Indexes *indexes);
@@ -101,8 +87,6 @@ void BuildIndexes(Indexes *indexes, Queries *queries);
 void SearchIndexes(EntryList *hamming_results, EntryList *edit_results,
                    EntryList *exact_results, Document doc, Indexes indexes,
                    int c);
-
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

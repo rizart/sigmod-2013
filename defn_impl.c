@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-//--------------------------------Word----------------------------------------//
+// Word
 
 void CreateWord(const char *word_str, Word *word) {
     // allocate memory for word
@@ -28,7 +28,7 @@ void PrintWord(Word *word) {
     printf("%s", word->word_str);
 }
 
-//------------------------------Query-----------------------------------------//
+// Query
 
 void CreateQuery(QueryID query_id, const char *query_str,
                  enum MatchType match_type, unsigned int match_dist,
@@ -99,7 +99,7 @@ void PrintQuery(Query *query) {
     printf("================================================\n");
 }
 
-//----------------------------Document----------------------------------------//
+// Document
 
 void DestroyHashtable(BT_Node **HashTable, int hashprime) {
     int i;
@@ -213,7 +213,7 @@ void PrintDocument(Document *doc) {
         "_________________________________________________________________\n");
 }
 
-//---------------------------MatchType----------------------------------------//
+// MatchType
 
 int Equal(const Word *w1, const Word *w2) {
     if (w1->length == w2->length)
@@ -276,7 +276,7 @@ int EditDistance(const Word *w1, const Word *w2) {
     return Arr[1 - cur][w2->length];
 }
 
-//--------------------------------Utilities-----------------------------------//
+// Utilities
 
 BT_Node *insert_bt(BT_Node *node, Word word) { // Insert in binary tree
 

@@ -15,13 +15,11 @@ void radixsort(int *array, int n) {
         for (i = 0; i < n; i++)
             bucket[(array[i] / exp) % 10]++;
 
-        //-------------------------------------------------------
         for (i = 1; i < 10; i++)
             bucket[i] += bucket[i - 1];
 
         for (i = n - 1; i >= 0; i--)
             b[--bucket[(array[i] / exp) % 10]] = array[i]; // sort with digit
-        //-------------------------------------------------------
 
         for (i = 0; i < n; i++)
             array[i] = b[i];

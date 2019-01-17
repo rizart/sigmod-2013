@@ -11,7 +11,6 @@ typedef struct ResultsTable ResultsTable;
  * This structure holds a docs results
  */
 typedef struct Results_struct Results_struct;
-//------------------------------------------------------------------------------
 
 // create the results table
 void CreateResultsTable(ResultsTable *restable);

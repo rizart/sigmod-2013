@@ -11,7 +11,7 @@
 
 #define NUM_OF_ENTRIES_MAX_DEPTH 0
 
-//------------------------VP UTILITIES----------------------------------------//
+// VP UTILITIES
 
 // Find the vantage point and the median
 int Find_Vp_Median(EntryList *vp_candidates, EntryList *subset_entries,
@@ -66,8 +66,6 @@ int Find_Vp_Median(EntryList *vp_candidates, EntryList *subset_entries,
     return max;
 }
 
-//----------------------------------------------------------------------------//
-
 // Generate two new sets of entries for left and right child respectfully
 void GenerateNewSets(EntryList *left_subtree, EntryList *right_subtree,
                      EntryList *entries, VPTnode *node, int vp, int median,
@@ -93,7 +91,7 @@ void GenerateNewSets(EntryList *left_subtree, EntryList *right_subtree,
     }
 }
 
-//--------------------------VP TREE-------------------------------------------//
+// VP TREE
 
 // Initialize vp tree
 void InitializeVpTree(VP_Tree *vp_tree) {
@@ -132,14 +130,12 @@ void BuildVpTree(VPTnode *node, EntryList *entries, enum MatchType type) {
     CreateEntryList(&vp_candidates);
     for (i = 0; i != total_vp_candidates; i++)
         AddEntry(&vp_candidates, &entries->elist[i]);
-    //-------------------------------------------------
 
     // take the next subset_size of the entries
     EntryList subset_entries;
     CreateEntryList(&subset_entries);
     for (i = 0; i != subset_size; i++)
         AddEntry(&subset_entries, &entries->elist[total_vp_candidates + i]);
-    //------------------------------------------------
 
     //"vp" will represent the position of the vp point
     if (subset_size)
@@ -195,8 +191,6 @@ void BuildVpTree(VPTnode *node, EntryList *entries, enum MatchType type) {
     // create the sublists that will exapnd the tree
     GenerateNewSets(&left_subtree, &right_subtree, entries, node, vp, median,
                     type);
-
-    //--------------------------------------------------------------------------
 
     if (left_subtree.size) { // expand the left child
 

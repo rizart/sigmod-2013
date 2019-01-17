@@ -22,8 +22,8 @@ typedef struct Thread_Pool Thread_Pool;
 
 // the thread data
 typedef struct thread_data thread_data;
-//----------------------------- THREAD POOL ----------------------------------//
-//----------------------------------------------------------------------------//
+
+// THREAD POOL
 
 // initialize thread pool
 Thread_Pool *Initialize_ThPool(int num_of_threads);
@@ -42,8 +42,7 @@ void ThPool_AddJob(Thread_Pool *threadpool, void *(*function)(void *),
 // destroy thread pool
 void ThPool_Destroy(Thread_Pool *threadpool);
 
-//----------------------------- JOB QUEUE ------------------------------------//
-//----------------------------------------------------------------------------//
+// JOB QUEUE
 
 // initialize job queue
 void Initialize_JobQueue(Thread_Pool *threadpool);
@@ -59,9 +58,6 @@ Job *JobQueue_Getfirst(Thread_Pool *threadpool);
 
 // destroy job queue
 void JobQueue_Destroy(Thread_Pool *threadpool);
-
-//----------------------------------------------------------------------------//
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

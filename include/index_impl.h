@@ -8,8 +8,6 @@
 extern "C" {
 #endif
 
-//----------------------------------------------------------------------------//
-
 struct VP_Tree { // Struct that represents a VP Tree
 
     VPTnode *root;
@@ -24,8 +22,6 @@ struct VPTnode { // Struct that represents a VP Tree node
     EntryList *dataset;  // points to the remaining dataset if node is leaf
     // otherwise needs to be put NULL
 };
-
-//----------------------------------------------------------------------------//
 
 struct Edit_Index { // Struct that holds a VP Tree - edit indexing
 
@@ -43,16 +39,12 @@ struct Exact_Index { // Struct that holds a hashtable - exact indexing
     BTree_Node **HashTable;
 };
 
-//----------------------------------------------------------------------------//
-
 struct Indexes { // Struct that holds all indexes
 
     Edit_Index edit;
     Hamming_Index hamming;
     Exact_Index exact;
 };
-
-//----------------------------------------------------------------------------//
 
 struct EntryList { // Struct that holds a set of entries
 
@@ -61,8 +53,6 @@ struct EntryList { // Struct that holds a set of entries
     int current;
     Entry *elist;
 };
-
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

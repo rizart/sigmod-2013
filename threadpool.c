@@ -17,7 +17,7 @@ void BarrierJob(void *args) {
     pthread_barrier_wait(&barrier);
 }
 
-// ------------------------- THREAD POOL OPERATIONS ------------------------- //
+//  THREAD POOL OPERATIONS
 
 // wait for all jobs in jobqueue to be done
 void ThPool_Wait(Thread_Pool *threadpool) {
@@ -167,7 +167,7 @@ void ThPool_Destroy(Thread_Pool *threadpool) {
     free(threadpool);
 }
 
-// -------------------------- JOB QUEUE OPERATIONS -------------------------- //
+//  JOB QUEUE OPERATIONS
 
 void Initialize_JobQueue(Thread_Pool *threadpool) {
     // jobqueue memory allocation

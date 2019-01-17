@@ -7,7 +7,7 @@
 extern "C" {
 #endif
 
-// =========================== Structures =================================== //
+// Structures
 
 /*
  * This structure holds information about a particlar word.
@@ -32,7 +32,7 @@ typedef struct Document Document;
  */
 typedef struct BT_Node BT_Node;
 
-// ============================= Word ======================================= //
+// Word
 
 /*
  * Create the given word from the string specified.
@@ -49,7 +49,7 @@ void DestroyWord(Word *word);
  */
 void PrintWord(Word *word);
 
-// ========================== Query ========================================= //
+// Query
 
 /*
  * Create the given query from the parameters specified.
@@ -112,7 +112,7 @@ const struct Word *getQueryWord(unsigned int word, const Query *query);
  */
 void PrintQuery(Query *query);
 
-// ============================== Document ================================== //
+// Document
 
 /*
  * Create the given document from the parameters specified.
@@ -162,7 +162,7 @@ const struct Word *getDocumentWord(unsigned int word, const Document *doc);
  */
 void PrintDocument(Document *doc);
 
-// ============================= Distance =================================== //
+// Distance
 
 /*
  * Return 0 if the two words are equal, else return 1
@@ -180,14 +180,12 @@ int HammingDistance(const Word *w1, const Word *w2);
  */
 int EditDistance(const Word *w1, const Word *w2);
 
-// ======================== Utilities ======================================= //
+// Utilities
 
 /*
  * Method to remove the duplicate words from the document specified.
  */
 void RemoveDuplicates(Document *doc);
-
-//----------|      |----------------------------------------------------------//
 
 /*
  * Integrated part of RemoveDuplicates
@@ -214,7 +212,6 @@ void dealloc_bt(BT_Node *node);
  * Given a number returns the next prime number
  */
 int FindNextPrime(int number);
-//----------------------------------------------------------------------------//
 
 #ifdef __cplusplus
 }

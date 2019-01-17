@@ -12,7 +12,7 @@
 
 static Cache cache[NUM_OF_THREADS];
 
-//------------------------------INDEXES---------------------------------------//
+// INDEXES
 
 void InitializeIndexes(Indexes *indexes) {
     InitializeEditIndex(&indexes->edit);
@@ -100,7 +100,7 @@ void SearchIndexes(EntryList *hamming_results, EntryList *edit_results,
     }
 }
 
-//---------------------------------EDIT---------------------------------------//
+// EDIT DISTANCE INDEX
 
 void InitializeEditIndex(Edit_Index *index) {
     InitializeVpTree(&index->vp_tree);
@@ -123,7 +123,7 @@ void SearchEditIndex(Edit_Index index, Word word, EntryList *result,
                      MT_EDIT_DIST);
 }
 
-//------------------------------HAMMING---------------------------------------//
+// HAMMING DISTANCE INDEX
 
 void InitializeHammingIndex(Hamming_Index *index) {
     int i = 0;
@@ -173,7 +173,7 @@ void SearchHammingIndex(Hamming_Index index, Word word, EntryList *result) {
                      &result[i], NULL, MT_HAMMING_DIST);
 }
 
-//------------------------------EXACT-----------------------------------------//
+// EXACT MATCH INDEX
 
 void InitializeExactIndex(Exact_Index *index) {
     index->HashTable = NULL;
